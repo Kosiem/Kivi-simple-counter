@@ -1,0 +1,39 @@
+#: import utils kivy.utils
+
+
+Counter:
+
+<Counter>:
+    orientation: "vertical"
+    Label:
+        text: root.start
+        font_size: self.width / 10
+        font_name: "fonts/Alien-Encounters-Regular.ttf"
+        color: 0,1,1,1
+        background_color: utils.get_color_from_hex('#DEA623')
+
+    GridLayout:
+        rows: 1
+        cols: 3
+        Button:
+            id: start
+            text: "Start counter"
+            on_press: root.onstart()
+            font_name: "fonts/Alien-Encounters-Regular.ttf"
+            font_size: self.width/15
+            background_color: utils.get_color_from_hex('#4ecf3a')
+        Button:
+            id: reset
+            text: "Reset counter"
+            on_press: root.onreset()
+            background_color: utils.get_color_from_hex('#ed0955')
+            font_name: "fonts/Alien-Encounters-Regular.ttf"
+            font_size: self.width/15
+        Button:
+            id: pause
+            text: "Pause counter"
+            on_press: root.onstop()
+            font_name: "fonts/Alien-Encounters-Regular.ttf"
+            font_size: self.width/15
+            background_color: utils.get_color_from_hex('#e32b2b')
+
